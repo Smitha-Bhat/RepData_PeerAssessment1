@@ -78,7 +78,8 @@ head(newData)
 Making a histogram of the total number of steps taken each day and Calculating the mean and median total number of steps taken per day, to illustrate the difference w.r.t original dataa
 ```{r}
  newSummary <- ddply (newData, .(interval), summarize, meanSteps = mean(steps, na.rm=TRUE))
-plot(newSummary$interval, newSummary$meanSteps, type ='l')
+plot(newSummary$interval, newSummary$meanSteps, type ='h')
+
 summary(newSummary)
 
 ```

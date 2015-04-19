@@ -123,7 +123,7 @@ Making a histogram of the total number of steps taken each day and Calculating t
 
 ```r
  newSummary <- ddply (newData, .(interval), summarize, meanSteps = mean(steps, na.rm=TRUE))
-plot(newSummary$interval, newSummary$meanSteps, type ='l')
+plot(newSummary$interval, newSummary$meanSteps, type ='h')
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-10-1.png) 
